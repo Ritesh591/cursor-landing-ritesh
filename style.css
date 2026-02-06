@@ -1,0 +1,728 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-color: #edecec;
+    --black-color: #14120b;
+    --gray-color: #3a3832;
+    --dark-gray-color: #1b1913;
+    --light-gray-color: #d7d6d5;
+    --hover-color: oklab(0.943853 0.00107113 0.000336707 / 0.75);
+    --link-color: oklab(0.652196 0.168318 0.131453);
+    --link-hover-color: oklab(0.652196 0.168318 0.131453 / 0.75);
+    --description-color: #edecec99;
+}
+
+body{
+    font-family: "Cursor Gothic", "Inter", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--black-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*  --------------------------  1. Top Navigation Bar  --------------------------  */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    height: 52px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--black-color);
+}
+
+nav .logo{
+    width: 96px;
+    height: 24px;
+    cursor: pointer;
+}
+
+nav .menu ul{
+    display: flex;
+    list-style: none;
+}
+
+
+nav .menu ul li a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 5.6px 15px;
+}
+
+nav .menu ul li a:hover{
+    color: var(--hover-color);
+}
+
+nav .buttons{
+    display: flex;
+    gap: 7.5px;
+}
+
+nav .buttons button{
+    padding: 5.6px 10.5px 5.88px;
+    border-radius: 16px;
+    border: none;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+nav .buttons button.sign-in{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: 1px solid var(--gray-color);
+}
+
+nav .buttons button.sign-in:hover{
+    background-color: var(--dark-gray-color);
+}
+
+nav .buttons button.download{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+nav .buttons button.download:hover{
+    background-color: var(--light-gray-color);
+}
+
+/*  --------------------------  2. Hero Section  --------------------------  */
+
+main{
+    padding: 120px 0 67px 0;
+}
+
+main .content{
+    margin-bottom: 56px;
+}
+
+main .content h1{
+    max-width: 680px;
+    font-size: 26px;
+    line-height: 32.5px;
+    color: var(--white-color);
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.cta-button{
+    padding: 12.48px 21.6px 12.8px;
+    border-radius: 24px;
+    border: none;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover{
+    background-color: var(--light-gray-color);
+}
+
+.cta-button .download-icon{
+    width: 16px;
+    height: 16px;
+}
+
+main .image img{
+    border-radius: 4px;
+}
+
+/*  --------------------------  3. Trusted By / Logos  --------------------------  */
+
+.trusted-by{
+    gap: 22px;
+    padding-bottom: 33px;
+}
+
+.trusted-by .trusted-by-title{
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.trusted-by .logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.trusted-by .logos .logo{
+    background-color: #1b1913;
+    height: 100px;
+    width: 154px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.trusted-by .logos .logo img{
+    height: 40px;
+    object-fit: contain;
+}
+
+/*  --------------------------  4. Feature Sections (3 blocks)  --------------------------  */
+
+.features{
+    padding: 67px 0;
+    gap: 90px;
+}
+
+.features .features-card{
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 17px;
+    background-color: #1b1913;
+}
+
+.features .features-card:hover{
+    background-color: #1d1b15;
+}
+
+.features .features-card .features-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features .features-card .features-card-content.right-content{
+    margin-left: 32px;
+}
+
+.features .features-card .features-card-content .features-card-title{
+    font-size: 22px;
+    line-height: 28.6px;
+    color: var(--white-color);
+}
+
+.features .features-card .features-card-content .features-card-description{
+    font-size: 22px;
+    line-height: 28.6px;
+    color: var(--description-color);
+}
+
+.features .features-card .features-card-content .features-card-button{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.features .features-card .features-card-content .features-card-button:hover{
+    color: var(--link-hover-color);
+}
+
+.features .features-card .features-card-content .features-card-button img{
+    width: 16px;
+    height: 16px;
+}
+
+.features .features-card .features-card-image img{
+    border-radius: 4px;
+}
+
+/*  --------------------------  5. Testimonials Section  --------------------------  */
+
+.testimonials{
+    padding: 67px 0;
+    gap: 56px;
+}
+
+.testimonials .testimonials-title{
+    font-size: 36px;
+    line-height: 43.2px;
+    color: var(--white-color);
+    text-align: center;
+    font-weight: 400;
+}
+
+.testimonials .testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.testimonials .testimonials-grid .testimonial-card{
+    background-color: var(--dark-gray-color);
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.testimonials .testimonials-grid .testimonial-card .testimonial-quote{
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white-color);
+}
+
+.testimonials .testimonials-grid .testimonial-card .testimonial-author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonials .testimonials-grid .testimonial-card .testimonial-author .author-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+}
+
+.testimonials .testimonials-grid .testimonial-card .testimonial-author .author-info{
+    display: flex;
+    font-size: 14px;
+    line-height: 21px;
+    flex-direction: column;
+    color: var(--white-color);
+}
+
+.testimonials .testimonials-grid .testimonial-card .testimonial-author .author-info .author-role{
+    color: var(--description-color);
+}
+
+/*  --------------------------  6. Frontier Section  --------------------------  */
+
+.frontier{
+    padding: 111px 0;
+    gap: 22px;
+}
+
+.frontier .frontier-title{
+    font-size: 26px;
+    line-height: 32.5px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.frontier .frontier-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.frontier .frontier-grid .frontier-card{
+    background-color: var(--dark-gray-color);
+    padding: 15px 17px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.frontier .frontier-grid .frontier-card .frontier-card-content .frontier-card-title{
+    line-height: 24px;
+    color: var(--white-color);
+}
+
+.frontier .frontier-grid .frontier-card .frontier-card-content .frontier-card-description{
+    line-height: 24px;
+    color: var(--description-color);
+}
+
+.frontier .frontier-grid .frontier-card .frontier-card-content .frontier-card-link{
+    margin-top: 14px;
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.frontier .frontier-grid .frontier-card .frontier-card-content .frontier-card-link:hover{
+    color: var(--link-hover-color);
+}
+
+.frontier .frontier-grid .frontier-card .frontier-card-content .frontier-card-link img{
+    width: 16px;
+    height: 16px;
+}
+
+/*  --------------------------  7. Changelog Section  --------------------------  */
+
+.changelog{
+    padding: 67px 0;
+    gap: 22px;
+}
+
+.changelog .changelog-title{
+    font-size: 26px;
+    line-height: 32.5px;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.changelog .changelog-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.changelog .changelog-grid .changelog-card{
+    background-color: var(--dark-gray-color);
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.changelog .changelog-grid .changelog-card .changelog-meta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.changelog .changelog-grid .changelog-card .changelog-meta .changelog-version{
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--description-color);
+    border: 1px solid var(--description-color);
+    padding: 1px 10px;
+    border-radius: 18px;
+}
+
+.changelog .changelog-grid .changelog-card .changelog-meta .changelog-date{
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--description-color);
+}
+
+.changelog .changelog-grid .changelog-card .changelog-description{
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white-color);
+}
+
+.changelog .changelog-footer .changelog-link{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.changelog .changelog-footer .changelog-link:hover{
+    color: var(--link-hover-color);
+}
+
+.changelog .changelog-footer .changelog-link img{
+    width: 16px;
+    height: 16px;
+}
+
+
+/*  --------------------------  8. Join Us Section  --------------------------  */
+
+.join{
+    padding: 67px 0 111px 0;
+    gap: 22px;
+}
+
+.join .join-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join .join-card {
+    background-color: var(--dark-gray-color);
+    padding: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join .join-card .join-content{
+    padding-right: 30px;
+    max-width: 383px;
+}
+
+.join .join-card .join-content .join-title{
+    font-size: 22px;
+    line-height: 28.6px;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.join .join-card .join-content .join-link{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 22px;
+}
+
+.join .join-card .join-content .join-link:hover{
+    color: var(--link-hover-color);
+}
+
+.join .join-card .join-content .join-link img{
+    width: 16px;    
+}
+
+.join .join-card .join-media img{
+    border-radius: 4px;
+}
+
+/*  --------------------------  9. Recent Highlights Section  --------------------------  */
+
+.highlights{
+    padding: 89px 0;
+    gap: 22px;
+    background-color: var(--dark-gray-color);
+}
+
+.highlights .highlights-container{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+.highlights .highlights-container .highlights-title{
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white-color);
+    min-width: 325px;
+}
+
+.highlights .highlights-container .highlights-content{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.highlights .highlights-container .highlights-content .highlight-card{
+    background-color: #201E18;
+    padding: 13px 15px 15px;
+    min-width: 650px;
+    border-radius: 4px;
+    border: 1px solid #26241e;
+}
+
+.highlights .highlights-container .highlights-content .highlight-card:hover{
+    background-color: #26241e;
+}
+
+.highlights .highlights-container .highlights-content .highlight-card .highlight-title{
+    line-height: 24px;
+    color: var(--white-color);
+}
+
+.highlights .highlights-container .highlights-content .highlight-card .highlight-description{
+    line-height: 24px;
+    color: var(--description-color);
+    max-width: 607px;
+}
+
+.highlights .highlights-container .highlights-content .highlight-card .highlight-meta{
+    line-height: 24px;
+    color: var(--description-color);
+    margin-top: 22px;
+}
+
+
+.highlights .highlights-footer .highlights-link{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.highlights .highlights-footer .highlights-link:hover{
+    color: var(--link-hover-color);
+}
+
+.highlights .highlights-footer .highlights-link img{
+    width: 16px;
+    height: 16px;
+}
+
+/*  --------------------------  10. Try Cursor now Section  --------------------------  */
+
+.try-cursor-now{
+    padding: 134px 0;
+}
+
+.try-cursor-now .try-cursor-now-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.try-cursor-now .try-cursor-now-content .try-cursor-now-title{
+    font-size: 72px;
+    line-height: 79.2px;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.try-cursor-now .try-cursor-now-content .cta-button{
+    padding: 12.48px 21.6px 12.8px;
+}
+
+/*  --------------------------  11. Footer  --------------------------  */
+
+.footer{
+    padding: 67px 0 30px 0;
+    gap: 22px;
+     background-color: var(--dark-gray-color);
+}
+
+.footer .footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    padding-bottom: 56px;
+}
+
+
+.footer .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer .footer-heading {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--description-color);
+    font-weight: 400;
+}
+
+
+.footer .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .footer-links a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--white-color);
+    transition: color 0.2s ease;
+}
+
+.footer .footer-links a:hover {
+    color: var(--hover-color);
+}
+
+
+.footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+}
+
+
+.footer .footer-copyright p {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--description-color);
+}
+
+
+.footer .footer-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.footer .footer-theme-toggle {
+    background: #201E18;
+    border: 1px solid #26241e;
+    border-radius: 999px;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer .footer-theme-toggle:hover {
+    background: #26241e;
+}
+
+.footer .footer-theme-toggle img {
+    width: 16px;
+    height: 16px;
+}
+
+.footer .footer-language-button {
+    background: #201E18;
+    border: 1px solid #26241e;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: var(--white-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer .footer-language-button:hover {
+    background: #26241e;
+}
+
+.footer .footer-language-button img {
+    width: 14px;
+    height: 14px;
+}
